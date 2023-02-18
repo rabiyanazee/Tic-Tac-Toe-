@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:darkgrey;
+
+
+}
+.players{
+    border: 2px solid rgb(46, 19, 199) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 24px;
+    margin-top: 100px;
+}
+.players div{
+    padding: 15px 25px;
+    border-radius: 15px;
+    border:2px solid white;
+    justify-content: center;
+    justify-self: center;
+}
+.players div.active{
+    background-color: purple;
+    color: aliceblue;
+    justify-content: center;
+}
+.game-board{
+    margin-top: 50px;
+    justify-content:center;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+.cell{
+    height: 100px;
+    width: 100px;
+    border: 2px solid purple;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    cursor: pointer;
+   
+}
+.cell.X{
+    color:darkorchid purple;
+}
+.cell.O{
+    color: darkcyan;
+}
+.cell:nth-child(1),.cell:nth-child(2),.cell:nth-child(3){
+    border-top: none;
+}
+.cell:nth-child(1),.cell:nth-child(4),.cell:nth-child(7){
+    border-left: none;
+}
+.cell:nth-child(3),.cell:nth-child(6),.cell:nth-child(9){
+    border-right: none;
+}
+.cell:nth-child(7),.cell:nth-child(8),.cell:nth-child(9){
+    border-bottom: none;
+}
+.result{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(15, 181, 109, 0.5);
+
+}
+.result h1{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    background-color:transparent rgb(70, 40, 203);
+    padding: 15px 20px;
+}
+.result button{
+    font-size: 26px;
+    background-color: aqua;
+    border-radius: 10px;
+    color: darkblue;
+    cursor: pointer;
+    padding: 10px 25px;
+}
+.inactive{
+    display: none;
+}
+.disabled{
+    pointer-events: none;
+}
